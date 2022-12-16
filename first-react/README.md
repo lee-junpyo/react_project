@@ -1,5 +1,7 @@
-1. 프로젝트 생성 및 component 생성 및 props 사용
- * React 설치
+## 리액트 기초 프로젝트
+### 1. 프로젝트 생성 및 component 생성 및 props 사용
+<pre>
+* React 설치
     * npx create-react-app -> 리액틀르 시작하는데 필요한 패키지들을 싹다 가져와 한번에 설치 
 * React 구성
     * Public > index.html
@@ -20,3 +22,4 @@
     * 리액트는 Class가 아닌 className을 씀
     * JSX에서 elements는 하나의 태그(<>)로 감싸져 있어야한다.
     * react에선 내가 원하는걸 묶어서 태그화(컴포넌트) 시킬 수 있다.
+</pre>
