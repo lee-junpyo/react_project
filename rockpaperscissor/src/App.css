@@ -1,0 +1,38 @@
+.box{
+    border: 1px solid black;
+    width : 500px;
+    text-align: center;
+    height: 500px;
+    margin: 10px;
+}
+
+.win{
+    border: 10px solid green;
+}
+.lose{
+    border: 10px solid red;
+}
+.tie{
+    border: 10px solid black;
+}
+.item-img{
+    width: 400px;
+    height: 300px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.btns{
+    width : 100px;
+    height: 100px;
+    margin : 5px;
+    padding: 0;
+}
+.btn-img{
+    width : 80px;
+    height: 80px;
+    
+}
