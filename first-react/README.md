@@ -71,3 +71,16 @@
 > #### 3. Unmounting : 컴포넌트가 종료될때
 > * 실행 Function
 >    1. componentWillUnmount - 컴포넌트가 종료될때 사용
+*** 
+> ### 6.함수형 component 라이프사이클
+> * Lifecycle function은 class형컴포넌트에서만 사용가능하며 함수형 컴포넌트에서 사용 못함
+> * 함수형 component의 라이플사이클 대체제 - useEffect(react hook)
+> * useEffect - 매개변수를 2개를 받음(콜백함수, 배열)
+> * componentDidMount
+>   * useEffect 는 기본적으로 앱실행후 첫번째 렌더 후에 한번 실행이 된다.여기에선 주로 화면에 처음 보여줘야할 데이터들에 대한 api호출을 한다.
+>   * useEffect의 배열에 아무것도 없으면 componentDidMount처럼 작동
+> * componentDidUpdate
+>   * useEffect두번째 매개변수인 배열에 state가 들어가 있다면 state값이 바뀔때마다 호출되는 componentDidUpdate 의 역할을 한다.
+>   * state가 바뀌고 렌더후 호출된다
+> * 배열 안에 여러개의 state 가 들어있다면?
+>   * 배열안에 여러개의 state를 구독하고 있다면 배열 안에 state중 하나라도 업데이트가 되면 해당 useEffect가 호출이 된다. 하지만 여러개의 state가 동시에 업데이트 되었다 해도 한번만 호출이 된다.
