@@ -51,5 +51,23 @@
 > ### 4.class component
 > * Constructor 라는 생성자를 통해 컴포넌트 생성할 때 state도 같이 생성
 > * state값을 변경 시 setState 함수를 통해 값 변경
-> * 함수, state를 부를 시 this. 항상 붙음
+> * 함수, state를 부를 시 this. 항상 붙음> * ˚kv
 > * props 만들 시 this. 항상 붙음
+*** 
+> ### 5.lifecycle
+> * 리액트 앱의 3가지 lifecycle
+> #### 1. Mounting - 컴포넌트가 시작했을때
+> * 실행 Function
+>    1. constructor - 첫번째로 실행되는 lifecycle 함수, 컴포넌트가 실행될 때 constructor 먼저 호출
+>    2. getDerivedStateFromProps - render 메서드를 호출하기 직전에 호출, state와 props를 동기화 시켜주는 함수
+>    3. render - UI 그려주는 함수
+>    4. componentDidMount - UI 세팅이 완료되면 알려줌
+> #### 2. Updating - state가 업데이트되고 UI업데이트 될때
+> * 실행 Function
+>    1. getDerivedStateFromProps - render 메서드를 호출하기 직전에 호출, state와 props를 동기화 시켜주는 함수
+>    2. shouldComponentUpdate - 컴포넌트가 render를 할지말지 결정하는 함수
+>    3. render - state, props가 업데이트되거나 업데이트가 강요되는 기타 상황들일 경우 render가 일어남
+>    4. componentDidUpdate - state가 업데이트가 됐는지 알려줌
+> #### 3. Unmounting : 컴포넌트가 종료될때
+> * 실행 Function
+>    1. componentWillUnmount - 컴포넌트가 종료될때 사용
