@@ -4,6 +4,7 @@
 * 날씨앱 게임을 리액트로 구현한 프로젝트 입니다.
 * useEffect를 사용하여 버튼 선택 시 해당 날씨 정보를 가져오는 프로젝트 입니다.
 <br>
+<br>
 <img src="https://user-images.githubusercontent.com/111855438/224701625-1e898a83-eb96-4a43-a579-ac63d3ed7cd0.mp4">
 
  ### 스토리보드
