@@ -1,5 +1,5 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route} from "react-router-dom";
 import ProductAll from './page/ProductAll';
 import Login from './page/Login';
@@ -17,7 +17,7 @@ import PrivateRoute from './route/PrivateRoute';
 //5. 로그아웃 버튼을 클릭하면 로그아웃이 된다.
 //5. 로그아웃이되면 상품 디테일페이지를 볼 수 없다. 다시 로그인 페이지가 보인다.
 //6. 로그인을 하면 로그아웃이 보이고 로그아웃을 하면 로그인이 보인다.
-//7. 상품을 검색할 수 있다.
+//7. 상품을 검색할 수 있다. - 엔터키 누를때만 검색
 function App() {
   const [authenticate, setAuthenticate] = useState(false) //true - 로그인이 됨, false - 로그인이 안됨
   useEffect(()=>{
@@ -25,7 +25,7 @@ function App() {
   },[authenticate]);
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path='/' element={<ProductAll />} />
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate} />} />
