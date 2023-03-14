@@ -10,7 +10,7 @@ const ProductAll = () => {
         let searchQuery = query.get('q') || "";
         //console.log("쿼리값은?", searchQuery);
         //q=${쿼리} 하면 알아서 json-server에서 찾아줌
-        let url = `http://localhost:5000/products?q=${searchQuery}`;  
+        let url = `https://my-json-server.typicode.com/lee-junpyo/react_project/products?q=${searchQuery}`;  
         let response = await fetch(url);
         let data = await response.json();
         setProductList(data);
