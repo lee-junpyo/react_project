@@ -1,7 +1,13 @@
+.login-box{
+    display: flex;
+    justify-content: center;
+}
+
 .login-button{
     display: flex;
     justify-content: flex-end;
     margin : 20px;
+    cursor: pointer;
 }
 
 .login-text{
@@ -9,9 +15,16 @@
     margin-top: -3px;
 }
 
+.form-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .nav-section {
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .menu-area{
     display: flex;
@@ -30,7 +43,6 @@
 .landing-search-box{
     right: 20px;
     position: absolute;
-    margin-top: 15px;
   }
   .search-box{
     border-bottom: 1px solid black;
@@ -66,4 +78,15 @@
     font-size: 11px;
     height: 20px;
   }
-  
+  .product-box{
+    display: flex;
+    justify-content: center;
+  }
+  .product-img{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .product-info div{
+    margin-bottom: 10px;
+}
