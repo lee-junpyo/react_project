@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## 쇼핑몰 프로젝트
+### 프로젝트 소개
+* 해당 프로젝트는 인프런 강의인 **리액트 : 프론트엔드 개발자로 가는 마지막 단계** 의 클론코딩한 프로젝트 입니다.
+* 연락처앱을 리액트로 구현한 프로젝트 입니다.
+* redux를 사용하여 연락처를 추가 및 추가된 연락처를 검색할 수 있게 개발 진행하였습니다.
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 화면단
+<img src="https://user-images.githubusercontent.com/111855438/225859722-a614f07f-ac90-46ef-840d-8a049e784257.mp4">
+<br>
+<br>
 
-## Available Scripts
+ ### 스토리보드
+> 1. 유저는 연락처를 생성할 수 있다.
+>       * 추가 버튼시 연락처를 추가시킨다. 
+> 2. 연락처에는 이름과 전화번호 정보가 필요하다.
+>       * 왼쪽에는 연락처 등록하는 폼이, 오른쪽에는 연락처 리스트와 search창이 있다.
+> 3. 유저는 연락처 리스트를 볼 수 있다.
+>       * 연락처가 추가될때마다 리스트에도 추가된다.
+> 4. 유저는 이름으로 연락처를 검색할 수 있다.
+>       * 찾기 버튼 누를 시 검색이 된다.
+>       * 빈 값 검색 시 모든 연락처를 가져온다.
+<br>
 
-In the project directory, you can run:
+### 사용한 기술 스택
+#### IDE
+  <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white"/>
+<br>
 
-### `npm start`
+#### Front-End Programming Languages
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS Modules-000000?style=flat&logo=cssModules&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript(ES8)-F7DF1E?style=flat&logo=javascript&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white"/><img src="https://img.shields.io/badge/BootStrap-7952B3?style=flat&logo=bootstrap&logoColor=white"/>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 형상관리
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+<br>
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 라이브러리
+* react-bootstrap : 2.7.2
+* redux : 4.2.1
+* react-redux :8.0.5
+<br>
+<br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 개발자 정보
+|Profile|<img src="https://user-images.githubusercontent.com/48265181/197502155-a56f3d2b-6301-41cf-aa65-59e54e253fa9.png" />|
+|:---:|:---:|
+|Name|이준표|
+|Email|2junticket@gmail.com|
