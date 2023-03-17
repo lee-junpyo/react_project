@@ -1,15 +1,21 @@
-import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
+import React, {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Button, Dropdown, DropdownButton, ButtonGroup } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { productAction } from '../redux/actions/productAction';
 const ProductDetail = () => {
     let {id} = useParams();
-    const [product, setProduct] = useState(null);
+    const product = useSelector((state) => state.product.selectItem);
+    //const [product, setProduct] = useState(null);
+    const dispatch = useDispatch();
     const [selectSize, setSelectSize] = useState(null);
     const getProductDetail= async() => {
-        let url = `https://my-json-server.typicode.com/lee-junpyo/react_project/products/${id}`
-        let response = await fetch(url);
-        let data = await response.json();
-        setProduct(data);
+        //리듀서로 교체
+        // let url = `https://my-json-server.typicode.com/lee-junpyo/react_project/products/${id}`
+        // let response = await fetch(url);
+        // let data = await response.json();
+        //setProduct(data);
+        dispatch(productAction.getProductDetail(id));
     }
     const handleSizeChange = (eventKey) => {
         //console.log(eventKey);

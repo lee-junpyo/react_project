@@ -1,11 +1,17 @@
-import React, {useState} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
-import { faSearch,faBars } from '@fortawesome/free-solid-svg-icons'
-import { useNavigate } from 'react-router-dom'
-const Navbar = ({authenticate, setAuthenticate}) => {
+import React, {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faSearch,faBars } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { authenticateAction } from '../redux/actions/authenciateAction';
+
+
+const Navbar = () => {
     const menuList = ['여성', 'Divided', '남성', '신생아/유아','아동', 'H&M HOME', 'Sale', '지속가능성']
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    let authenticate = useSelector((state) => state.auth.authenticate);
     let [width, setWidth] = useState(0);
     const goToLogin = () => {
         navigate('/login');
@@ -20,7 +26,8 @@ const Navbar = ({authenticate, setAuthenticate}) => {
     }
 
     const logout = () => {
-        setAuthenticate(false);
+        dispatch(authenticateAction.logout());
+        //setAuthenticate(false); - 리듀서로 변경
     }
   return (
     <div>
