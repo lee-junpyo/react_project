@@ -1,6 +1,13 @@
 body{
     background-color: black !important;
     color: white !important;
+    width: 100%;
+    height: 100%;
+}
+.spiner-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-item {
     color: white;
@@ -11,30 +18,129 @@ body{
     color: red;
     text-decoration: none;
 }
-
+.banner-area{
+    width: 100%;
+    height: 100vh;
+}
 .banner{
-    height: 600px;
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position :center; 
-    background-attachment: fixed;
+    background-size: 70% 100%;
+    background-position: center;
     display: flex;
     align-items: center;
-    
-    
 }
 
 .banner::before{
     position: absolute;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     content: '';
-    background: linear-gradient(to right, black, transparent);
+    background: linear-gradient(to right , black, transparent);
+    
 }
 
 .banner-info{
     width: 40%;
     margin-left: 30px;
     z-index: 1;
+}
+
+.titles{
+    padding: 10px 30px 10px 30px;
+    color: #e5e5e5;
+}
+
+.carousel-area{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+.carousel-area .react-multi-carousel-list {
+    overflow: visible !important;
+}
+.card-box{
+    max-width: 400px;
+    min-height: 250px;
+    max-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -1rem -5rem;
+    transition: all 0.2s linear;
+}
+
+.overlay{
+    opacity: 0;  
+    background: rgb(43, 41, 41, 0.9);
+    width: 96.5%;
+    height: 300px;
+    z-index: 100;
+    overflow:hidden;
+}
+.react-multi-carousel-item{
+    z-index: 1;
+}
+.react-multi-carousel-item:hover {
+    z-index: 2;
+}
+.card-box:hover {
+    cursor:pointer;
+    -ms-transform: scale(1.3);  /* IE 9 */
+    -webkit-transform: scale(1.3);  /* Safari 3-8 */
+    transform: scale(1.3); 
+    overflow: visible;
+    /* transform: translateY( -100px ); */
+}
+.card-box:hover .overlay{
+    opacity: 1;
+}
+.overlay {
+    padding: 20px;
+}
+.genre-badge{
+    margin-right: 10px;
+}
+
+.detail-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.detail-poster-area img{
+    width: 570px;
+}
+
+.review-box{
+    border: 4px solid white;
+}
+.review-area{
+    padding: 20px 40px 20px 40px;
+}
+
+.related-movie-box{
+    display: flex;
+    justify-content: center;
+}
+
+.related-movie-box .card-box{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.detail-btn-box{
+    margin-top : 40px;
+    margin-bottom: 40px;
+}
+
+.detail-btn-area .detail-btns{
+    margin-right : 20px;
+    width : 10rem;
+    height: 3rem;
+}
+
+.detail-badge-box ul{
+    list-style: none;
+    padding-left: 0px;
 }

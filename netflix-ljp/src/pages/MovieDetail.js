@@ -1,8 +1,144 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Container, Row, Col, Button, Badge } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { movieAction } from '../redux/action/movieAction';
+import { useParams } from 'react-router-dom';
+import ClipLoader from "react-spinners/ClipLoader";
+import YouTube from 'react-youtube';
+import Reviews from '../component/Reviews';
+import MovieCard from '../component/MovieCard';
 
 const MovieDetail = () => {
+  const dispatch = useDispatch();
+  const [selectBtn, setSelectBtn] = useState('');// 0- 리뷰 1- 관련영화
+  const { movieDetail, reviews, relatedMovies, movieVideo, loading } = useSelector((state)=> state.movie);
+  const [btnLoding, setBtnLoding] = useState(true);
+  //console.log('movieDetail',movieDetail);
+  //console.log('movieVideo',movieVideo);
+  console.log('reviews',reviews);
+  let {id} = useParams();
+  //console.log('id', id);
+  const getDetail = async() =>{
+    dispatch(movieAction.getMovieDetail(id));
+  }
+
+  useEffect(()=>{
+    if(id){
+      setBtnLoding(true);
+      getDetail();
+      window.scrollTo(0, 0);
+      setSelectBtn('reviewBtn');
+      setBtnLoding(false);
+    }
+  },[id]);
+
+  const handleChangeBtn = (e) => {
+    let { name } = e.target;
+    console.log('name', name);
+    setSelectBtn(name);
+  }
+
+  if(loading){
+    return <div className='spiner-area'><ClipLoader color="#ffffff" loading={loading} size={150}/></div>
+  }
   return (
-    <div>MovieDetail</div>
+    <Container className='detail-container'>
+      <Row className="mb-3">
+        <Col className='detail-poster-area'>
+          <img src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${movieDetail.poster_path}`} />
+        </Col>
+        <Col>
+          <div>
+            {movieDetail?.genres?.map((item)=>(
+                    <Badge bg="danger" className='genre-badge'>
+                        {item.name}
+                    </Badge>
+                ))}
+          </div>
+          <div>
+              <h1>{movieDetail.title}</h1>
+              <h5>{movieDetail.tagline}</h5>
+          </div>
+          <hr/>
+          <div>
+            <span>{movieDetail.vote_average}</span>
+            <span>{movieDetail.popularity}</span>
+            <span>{movieDetail.adult ? "청소년 관람불가" : "청소년 관람가능"}</span>
+          </div>
+          <hr/>
+          {movieDetail.overview && (
+            <div>
+            <p>{movieDetail.overview}</p>
+            <hr />
+            </div>
+          
+          )}
+          
+          <div className='detail-badge-box'>
+            <ul>
+              <li><Badge bg="danger" className='genre-badge'>Budget</Badge><span>{movieDetail.budget}</span></li>
+              <li><Badge bg="danger" className='genre-badge'>Revenue</Badge><span>{movieDetail.revenue}</span></li>
+              <li><Badge bg="danger" className='genre-badge'>Release Day</Badge>{movieDetail.release_date}</li>
+              <li><Badge bg="danger" className='genre-badge'>Time</Badge>{movieDetail.runtime}</li>
+            </ul>
+          </div>
+          <hr />
+            {movieVideo&&
+            <div>
+            <YouTube videoId={movieVideo.key} opts={{height : '400',playerVars : {
+              autoplay : 1,
+            }}} />
+            <hr />
+            </div>
+            }
+        </Col>
+      </Row>
+      <Row className="detail-btn-box">
+        <Col className='detail-btn-area'>
+          <Button className='detail-btns' variant={selectBtn === 'reviewBtn' ? 'danger' : 'light'} name='reviewBtn' onClick={handleChangeBtn}>리뷰({reviews?.length})</Button>
+          <Button className='detail-btns' variant={selectBtn === 'moviesBtn' ? 'danger' : 'light'}  name='moviesBtn' onClick={handleChangeBtn}>관련 영화{relatedMovies?.length && `(${relatedMovies?.length})`}</Button>
+        </Col>
+      </Row>
+      {
+        btnLoding ? (
+          <Row>
+            <Col className='spiner-area'>
+              <ClipLoader color="#ffffff" loading={btnLoding} size={150} />
+            </Col>
+          </Row>
+        
+        ) :(
+          <Row>
+          {selectBtn === 'reviewBtn' ? (
+            <Col className='review-box'>
+              {reviews.length !== 0 ? (
+                reviews?.map((item, index)=>(
+                  <div className={reviews.length !== (index+1) ? 'review-area border-bottom' : 'review-area'}>
+                  <Reviews item={item} />
+                  {/* {reviews.length !== (index+1) && <hr />}   */}
+                  </div>
+                ))
+              ) : (
+                <div className='review-area'>
+                <h6>리뷰가 없습니다.</h6>
+                </div>
+              )}
+              
+            </Col>
+          ) : (
+            <>
+            {relatedMovies?.map((item)=> (
+              <Col lg={6} className='mb-3 related-movie-box'>
+                {/* <div>{item}</div> */}
+                <MovieCard item={item} />
+              </Col>
+            ))}
+            </>
+          )}
+      </Row>
+        )
+      }
+    </Container>
   )
 }
 
