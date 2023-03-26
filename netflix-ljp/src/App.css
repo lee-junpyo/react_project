@@ -4,6 +4,10 @@ body{
     width: 100%;
     height: 100%;
 }
+
+.netflix-logo{
+    margin : 10px;
+}
 .spiner-area{
     display: flex;
     justify-content: center;

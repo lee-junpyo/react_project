@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <Navbar bg="dark" variant='dark' expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/"><img width={150} src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-1.png" /> </Navbar.Brand>
+        <Navbar.Brand href="/"><img className='netflix-logo' width={150} height={50} src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-1.png" /> </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
