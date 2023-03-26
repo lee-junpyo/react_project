@@ -13,6 +13,7 @@ body{
     color: white;
     text-decoration: none;
     margin-right: 20px;
+    font-size: 1.5rem;
 }
 .nav-item:hover {
     color: red;
@@ -21,6 +22,7 @@ body{
 .banner-area{
     width: 100%;
     height: 80vh;
+    cursor: pointer;
 }
 .banner{
     height: 80vh;
@@ -46,38 +48,72 @@ body{
     margin-left: 30px;
     z-index: 1;
 }
+.banner-info h1{
+    font-size : 10rem;
+}
+
+.banner-info p{
+    font-size: 2rem;
+    color: #e5e5e5;
+    font-weight: 200;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
 .titles{
-    padding: 10px 30px 10px 30px;
+    padding: 10px 30px 0px 30px;
     color: #e5e5e5;
 }
 
 .carousel-area{
-    margin-left: 50px;
-    margin-bottom: 50px;
-    margin-right: 50px;
+    position: relative;
+    padding-left: 70px;
+    padding-right: 50px;
 }
 
-.carousel-area .react-multi-carousel-list {
+/* .carousel-area .react-multi-carousel-list {
     overflow: visible !important;
+} */
+
+.card-area{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* height: 400px;
+    width: 500px; */
+    padding: 10px;
 }
 .card-box{
-    max-width: 400px;
-    min-height: 250px;
-    max-height: 300px;
+    width: 400px;
+    height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -1rem -5rem;
     transition: all 0.2s linear;
 }
 
 .overlay{
     opacity: 0;  
     background: rgb(43, 41, 41, 0.9);
-    width: 96.5%;
+    width: 100%;
     height: 300px;
     z-index: 100;
-    overflow:hidden;
+    
+}
+.card-info{
+    position: absolute;
+    bottom: 25px;
+}
+.card-info ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.card-info ul li{
+    padding-right: 5px;
 }
 .react-multi-carousel-item{
     z-index: 1;
@@ -90,7 +126,6 @@ body{
     -ms-transform: scale(1.3);  /* IE 9 */
     -webkit-transform: scale(1.3);  /* Safari 3-8 */
     transform: scale(1.3); 
-    overflow: visible;
     /* transform: translateY( -100px ); */
 }
 .card-box:hover .overlay{
@@ -125,7 +160,6 @@ body{
 }
 
 .related-movie-box .card-box{
-    width: 70%;
     margin-bottom: 20px;
 }
 
@@ -331,6 +365,15 @@ body{
     padding-left: 5px;
 }
 
-.adult-text{
+.adult-over{
     color: red;
+}
+
+.adult-under{
+    color: yellow;
+}
+
+.adult-text{
+    font-style: italic;
+    font-weight: 500;
 }

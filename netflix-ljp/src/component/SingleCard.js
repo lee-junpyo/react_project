@@ -46,7 +46,7 @@ const SingleCard = ({movie}) => {
                     <span className="imb-score">{movie.popularity}</span>
                 </li>
             </ul>
-            <div className={movie.adult && 'adult-text'}>{movie.adult ? "청소년 관람불가" : "청소년 관람가능"}</div>
+            <div className={movie.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{movie.adult ? "over 18" : "under 18"}</div>
         </div>
     </div>
   )

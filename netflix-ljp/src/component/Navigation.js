@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <Navbar bg="dark" variant='dark' expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/"><img width={100} src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png" /> </Navbar.Brand>
+        <Navbar.Brand href="/"><img width={150} src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" /> </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

@@ -2,6 +2,8 @@ import React from 'react';
 import { Badge } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const MovieCard = ({ item }) => {
     //console.log('item',item);
@@ -12,14 +14,15 @@ const MovieCard = ({ item }) => {
         navigate(`/movies/${item.id}`);
     }
   return (
+    <div className="card-area">
     <div className="card-box" onClick={showDetail} style={{
         backgroundImage : 
         "url(" + 
         `https://www.themoviedb.org/t/p/w440_and_h660_face/${item.poster_path}`
         +")"
-    }}>
+    }} >
         <div className='overlay'>
-            <h4>{item.title}</h4>
+            <h2>{item.title}</h2>
             <hr />
             <div>
                 {item.genre_ids?.map((id)=>(
@@ -28,12 +31,15 @@ const MovieCard = ({ item }) => {
                     </Badge>
                 ))}
             </div>
-            <div>
-                <p>{item.vote_average}</p>
-                <p>{item.popularity}</p>
-                <p>{item.adult ? "청소년 관람불가" : "청소년 관람가능"}</p>
+            <div className='card-info'>
+                <ul>
+                    <li><span><img width={20} src='https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png' />{item.vote_average}</span></li>
+                    <li><span className="imb-score"><FontAwesomeIcon icon={faUsers} />{item.popularity}</span></li>
+                    <li className={item.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{item.adult ? "over 18" : "under 18"}</li>
+                </ul>
             </div>
         </div>
+    </div>
     </div>
   )
 }
