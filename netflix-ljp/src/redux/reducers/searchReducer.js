@@ -20,11 +20,29 @@ function searchReducer(state=initialState, action){
     let { type, payload} = action;
     switch(type) {
         case "GET_MOVIE_LIST_SUCCESS" : 
-            return {...state, movies : payload.movies, filterList: payload.movies.results, genreList : payload.genreList.genres, loading: false}
+            return {...state, movies : payload.movies, filterList: payload.movies.results, genreList : payload.genreList.genres, loading: false,
+                filters : {sort : '',
+                year : {
+                    min : 1990, max : 2023
+                },
+                score : {
+                    min: 0, max : 10
+                },
+                selectedGenre : ''}
+            }
         case "GET_MOVIE_LIST_FAILURE" :
             return {...state, loading: false};
         case "GET_SEARCH_LIST_SUCCESS" :
-            return {...state, movieList : payload.movieList, genreList : payload.genreList.genres, loading: false}
+            return {...state, movies : payload.searchList, genreList : payload.genreList.genres, loading: false, filterList : payload.searchList.results,
+                filters : {sort : '',
+                    year : {
+                        min : 1990, max : 2023
+                    },
+                    score : {
+                        min: 0, max : 10
+                    },
+                    selectedGenre : ''}
+            }
         case "GET_SEARCH_LIST_FAILURE" : 
             return {...state, loading: false};
         case "FILTER_SETTING" : 
@@ -76,8 +94,8 @@ function searchReducer(state=initialState, action){
             if(payload.type === 'score') return {... state, filters : {...state.filters, score: payload.value}, filterList : scoreFilterArr};
             if(payload.type === 'genre') return {... state, filters : {...state.filters, movieArr: movieArr, selectedGenre: payload.selectedGenre}, filterList : scoreFilterArr};
 
-        case "GET_SEARCH_LIST_SUCCESS" : 
-            return {...state, movies : payload.searchList, filterList :  payload.searchList, genreList : payload.genreList}
+        case "SET_KEYWORD" :
+            return {...state, keyword : payload}
         default :
             return { ...state };
     }

@@ -7,7 +7,7 @@ function getList(genre){
         try{
             console.log('action genre', genre);
             const nowPlayingMovieApi = api.get(
-                `movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=${genre}&page=1`
+                `movie/popular?api_key=${API_KEY}&language=en-US&with_genres=${genre}&page=1`
             );
             const genreApi = api.get(
                 `genre/movie/list?api_key=${API_KEY}&language=en-US`

@@ -4,7 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import MovieCard from './MovieCard';
 
 const MovieSlide = ({ movies }) => {
-  console.log('movies', movies);
+  //console.log('movies', movies);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

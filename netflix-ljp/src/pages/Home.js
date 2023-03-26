@@ -9,10 +9,16 @@ import ClipLoader from "react-spinners/ClipLoader";
 const Home = () => {
     const dispatch = useDispatch();
     const {popularMovies, topRatedMovies, upcomingMovies, loading} = useSelector(state=>state.movie);
+
     //console.log('home', popularMovies);
     useEffect(()=> {
         dispatch(movieAction.getMovies());
+        dispatch({
+            type : "SET_KEYWORD",
+            payload : ''
+          })
     },[]);
+
     //loding이 trueaus loading 스피너를 보여주고
     // false면 데이터를 보여 줌
     // true : 데이터 도착 전 false : 데이터도착 후, 에러 났을 때

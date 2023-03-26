@@ -11,11 +11,8 @@ const Movies = () => {
   const {keyword} =  useSelector((state)=> state.search);
   
   useEffect(()=>{
-    if(keyword !== ''){
-      dispatch(searchAction.getSearchList(keyword));
-    }else{
+    if(keyword === ''){
       dispatch(searchAction.getList());
-      //dispatch(searchAction.getListJsonPush());
     }
   },[keyword]);
   return (
