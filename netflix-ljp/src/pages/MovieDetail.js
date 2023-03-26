@@ -7,6 +7,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 import YouTube from 'react-youtube';
 import Reviews from '../component/Reviews';
 import MovieCard from '../component/MovieCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const MovieDetail = () => {
   const dispatch = useDispatch();
@@ -60,10 +62,10 @@ const MovieDetail = () => {
               <h5>{movieDetail.tagline}</h5>
           </div>
           <hr/>
-          <div>
-            <span>{movieDetail.vote_average}</span>
-            <span>{movieDetail.popularity}</span>
-            <span>{movieDetail.adult ? "청소년 관람불가" : "청소년 관람가능"}</span>
+          <div className='detail-info'>
+            <span><img width={20} src='https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png' />{movieDetail.vote_average}</span>
+            <span className="imb-score"><FontAwesomeIcon icon={faUsers} />{movieDetail.popularity}</span>
+            <span className={movieDetail.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{movieDetail.adult ? "over 18" : "under 18"}</span>
           </div>
           <hr/>
           {movieDetail.overview && (
