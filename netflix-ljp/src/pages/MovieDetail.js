@@ -98,7 +98,7 @@ const MovieDetail = () => {
       <Row className="detail-btn-box">
         <Col className='detail-btn-area'>
           <Button className='detail-btns' variant={selectBtn === 'reviewBtn' ? 'danger' : 'light'} name='reviewBtn' onClick={handleChangeBtn}>리뷰({reviews?.length})</Button>
-          <Button className='detail-btns' variant={selectBtn === 'moviesBtn' ? 'danger' : 'light'}  name='moviesBtn' onClick={handleChangeBtn}>관련 영화{relatedMovies?.length && `(${relatedMovies?.length})`}</Button>
+          <Button className='detail-btns' variant={selectBtn === 'moviesBtn' ? 'danger' : 'light'} disabled={relatedMovies?.length === 0 && true}  name='moviesBtn' onClick={handleChangeBtn}>관련 영화{`(${relatedMovies?.length})`}</Button>
         </Col>
       </Row>
       {
@@ -129,12 +129,18 @@ const MovieDetail = () => {
             </Col>
           ) : (
             <>
-            {relatedMovies?.map((item)=> (
-              <Col lg={6} className='mb-3 related-movie-box'>
-                {/* <div>{item}</div> */}
-                <MovieCard item={item} />
-              </Col>
-            ))}
+            {
+            relatedMovies?.length !== 0 ? (
+              relatedMovies?.map((item)=> (
+                <Col lg={4} className='mb-3 related-movie-box'>
+                  {/* <div>{item}</div> */}
+                  <MovieCard item={item} />
+                </Col>
+              ))
+            ) : (
+              <p>관련 영화가 없습니다.</p>
+            )
+            }
             </>
           )}
       </Row>
