@@ -15,6 +15,7 @@ const Movies = () => {
       dispatch(searchAction.getSearchList(keyword));
     }else{
       dispatch(searchAction.getList());
+      //dispatch(searchAction.getListJsonPush());
     }
   },[keyword]);
   return (

@@ -1,5 +1,5 @@
 import api from "../api";
-
+import axios from "axios";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function getList(genre){
@@ -64,9 +64,38 @@ function getSearchList(keyword){
     }
 }
 
-
-
-export const searchAction = {
-    getList, getSearchList
+function getListJsonPush(){
+    return async(dispatch) => {
+        try{
+            for(let i =1; i < 51; i++){
+                const nowPlayingMovieApi = api.get(
+                    `movie/now_playing?api_key=${API_KEY}&language=en-US&page=${i}`
+                );
+                let [nowPlayingMovies] = await Promise.all(
+                    [nowPlayingMovieApi]
+                );
+                let movies = nowPlayingMovies.data.results;
+                let url = "http://localhost:5000/movies";
+                for (let j=0; j < movies.length; j++){
+                    let movie = movies[j];
+                    let data = await axios.post(url,{
+                        movie
+                    })
+                    console.log('json',j,data);
+                }
+                
+                
+                
+                   // movies : JSON.stringify(nowPlayingMovies.data.results)
+            }
+            
+        }catch(error){
+            console.log('GET_LIST_JSON_FAILURE', error);
+            //에러 핸들링 하는 곳
+        }
+    }
 }
 
+export const searchAction = {
+    getList, getSearchList, getListJsonPush
+}
