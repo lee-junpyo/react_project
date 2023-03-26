@@ -143,7 +143,7 @@
     ],
     "movies": [
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/a2tys4sD7xzVaogPntGsT1ypVoT.jpg",
             "genre_ids": [
@@ -163,11 +163,10 @@
             "video": false,
             "vote_average": 6.5,
             "vote_count": 463
-        },
-        "id": 1
+       
         },
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg",
             "genre_ids": [
@@ -186,11 +185,10 @@
             "video": false,
             "vote_average": 8.3,
             "vote_count": 202
-        },
-        "id": 2
+        
         },
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/ouB7hwclG7QI3INoYJHaZL4vOaa.jpg",
             "genre_ids": [
@@ -211,10 +209,9 @@
             "vote_average": 8.3,
             "vote_count": 4814
         },
-        "id": 3
-        },
+        
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/wD2kUCX1Bb6oeIb2uz7kbdfLP6k.jpg",
             "genre_ids": [
@@ -233,10 +230,9 @@
             "vote_average": 5.8,
             "vote_count": 170
         },
-        "id": 4
-        },
+        
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/zM9RGbJBZ3UNpFOabcRqh0iVAYP.jpg",
             "genre_ids": [
@@ -256,10 +252,9 @@
             "vote_average": 6.4,
             "vote_count": 1103
         },
-        "id": 5
-        },
+        
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/9Rq14Eyrf7Tu1xk0Pl7VcNbNh1n.jpg",
             "genre_ids": [
@@ -278,11 +273,10 @@
             "video": false,
             "vote_average": 6.9,
             "vote_count": 949
-        },
-        "id": 6
+        
         },
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/wybmSmviUXxlBmX44gtpow5Y9TB.jpg",
             "genre_ids": [
@@ -301,11 +295,10 @@
             "video": false,
             "vote_average": 7,
             "vote_count": 233
-        },
-        "id": 7
+        
         },
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/5i6SjyDbDWqyun8klUuCxrlFbyw.jpg",
             "genre_ids": [
@@ -322,11 +315,10 @@
             "video": false,
             "vote_average": 7.1,
             "vote_count": 415
-        },
-        "id": 8
+        
         },
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/pxJbfnMIQQxCrdeLD0zQnWr6ouL.jpg",
             "genre_ids": [
@@ -345,11 +337,10 @@
             "video": false,
             "vote_average": 6.1,
             "vote_count": 210
-        },
-        "id": 9
+        
         },
         {
-        "movie": {
+        
             "adult": false,
             "backdrop_path": "/2E6pIbJien7B9yWpaz8Yd2njzUI.jpg",
             "genre_ids": [
@@ -367,8 +358,7 @@
             "video": false,
             "vote_average": 5.9,
             "vote_count": 30
-        },
-        "id": 10
+       
         }
     ]
       
