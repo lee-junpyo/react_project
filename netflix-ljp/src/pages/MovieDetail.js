@@ -52,7 +52,7 @@ const MovieDetail = () => {
         <Col>
           <div>
             {movieDetail?.genres?.map((item)=>(
-                    <Badge bg="danger" className='genre-badge'>
+                    <Badge pill bg="danger" className='genre-badge'>
                         {item.name}
                     </Badge>
                 ))}
@@ -78,10 +78,10 @@ const MovieDetail = () => {
           
           <div className='detail-badge-box'>
             <ul>
-              <li><Badge bg="danger" className='genre-badge'>Budget</Badge><span>{movieDetail.budget}</span></li>
-              <li><Badge bg="danger" className='genre-badge'>Revenue</Badge><span>{movieDetail.revenue}</span></li>
-              <li><Badge bg="danger" className='genre-badge'>Release Day</Badge>{movieDetail.release_date}</li>
-              <li><Badge bg="danger" className='genre-badge'>Time</Badge>{movieDetail.runtime}</li>
+              <li><Badge bg="warning" text='dark' className='genre-badge'>Budget</Badge><span>{movieDetail.budget}</span></li>
+              <li><Badge bg="warning" text='dark' className='genre-badge'>Revenue</Badge><span>{movieDetail.revenue}</span></li>
+              <li><Badge bg="warning" text='dark' className='genre-badge'>Release Day</Badge>{movieDetail.release_date}</li>
+              <li><Badge bg="warning" text='dark' className='genre-badge'>Time</Badge>{movieDetail.runtime}</li>
             </ul>
           </div>
           <hr />
