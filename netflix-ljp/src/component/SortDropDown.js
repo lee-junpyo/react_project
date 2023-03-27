@@ -23,7 +23,7 @@ const SortDropDown = () => {
         <span className='side-names'>Sort Results By</span>
       </div>
       <div className='sort-dropdown-btn-area' size="lg">
-      <DropdownButton className='sort-dropdown-btns' id='dropdown-item-button' title={sort !== '' ? sort : dropItems[0]} variant='outline-light' onSelect={handleOnSelect}>
+      <DropdownButton className='sort-dropdown-btns' id='dropdown-item-button' title={sort !== '' ? sort : 'none'} variant='outline-light' onSelect={handleOnSelect}>
         {dropItems.map((item)=> (
           <Dropdown.Item as="button" eventKey={item}>{item}</Dropdown.Item>
         ))}

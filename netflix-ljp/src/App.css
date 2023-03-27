@@ -92,7 +92,7 @@ body{
     padding: 10px;
 }
 .card-box{
-    width: 400px;
+    width: 40vh;
     height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,8 +108,8 @@ body{
     padding: 30px 20px 20px 20px;
 }
 .card-info{
-    position: absolute;
-    bottom: 25px;
+    position: fixed;
+    bottom: 1vh;
 }
 .card-info ul{
     list-style: none;
