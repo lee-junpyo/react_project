@@ -32,11 +32,11 @@ const Home = () => {
             <Banner movie={popularMovies?.results[0]} />
         {/* } */}
         <div className='movie-list-area'>
-        <h2 className='titles'>인기 많은 영화(Popular Movie)</h2>
+        <span className='titles'><b>Popular Movie</b><span>인기 많은 영화</span></span>
         <MovieSlide movies={popularMovies} />
-        <h2 className='titles'>평점 좋은 영화(Top rated Movie)</h2>
+        <span className='titles'><b>Top rated Movie</b><span>평점 좋은 영화</span></span>
         <MovieSlide movies={topRatedMovies} />
-        <h2 className='titles'>개봉 예정 영화(Upcoming Movie)</h2>
+        <span className='titles'><b>Upcoming Movie</b><span>개봉 예정 영화</span></span>
         <MovieSlide movies={upcomingMovies} />
         </div>
     </div>

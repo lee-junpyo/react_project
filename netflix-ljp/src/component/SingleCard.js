@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import MovieInfo from './MovieInfo';
 
 const SingleCard = ({movie}) => {
     const { genreList } = useSelector((state)=> state.search);
@@ -36,17 +37,7 @@ const SingleCard = ({movie}) => {
             <p className='card-overview'>{movie.overview}</p>
         </div>
         <div className='card-footer'>
-            <ul>
-                <li>
-                    <img width={20} src='https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png' />
-                    <span className="imb-score">{movie.vote_average}</span>
-                </li>
-                <li>
-                    <FontAwesomeIcon icon={faUsers} />
-                    <span className="imb-score">{movie.popularity}</span>
-                </li>
-            </ul>
-            <div className={movie.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{movie.adult ? "over 18" : "under 18"}</div>
+            <MovieInfo popularity={movie.popularity} adult={movie.adult} vote_average={movie.vote_average} />
         </div>
     </div>
   )

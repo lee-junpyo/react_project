@@ -72,6 +72,15 @@ body{
     color: #e5e5e5;
 }
 
+.titles b{
+    font-size: calc(1.325rem + .9vw);
+    margin-right: 5px;
+}
+
+.titles span{
+    font-size: calc(0.01rem + .5vw);
+}
+
 .carousel-area{
     position: relative;
     margin-left: 20px;
@@ -401,6 +410,7 @@ body{
 }
 
 .adult-text{
+    margin-left : 5px;
     font-style: italic;
     font-weight: 500;
 }

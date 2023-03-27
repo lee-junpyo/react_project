@@ -9,7 +9,7 @@ import Reviews from '../component/Reviews';
 import MovieCard from '../component/MovieCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
-
+import MovieInfo from '../component/MovieInfo';
 const MovieDetail = () => {
   const dispatch = useDispatch();
   const [selectBtn, setSelectBtn] = useState('');// 0- 리뷰 1- 관련영화
@@ -62,10 +62,9 @@ const MovieDetail = () => {
               <h5>{movieDetail.tagline}</h5>
           </div>
           <hr/>
+          
           <div className='detail-info'>
-            <span><img width={20} src='https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png' />{movieDetail.vote_average}</span>
-            <span className="imb-score"><FontAwesomeIcon icon={faUsers} />{movieDetail.popularity}</span>
-            <span className={movieDetail.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{movieDetail.adult ? "over 18" : "under 18"}</span>
+            <MovieInfo popularity={movieDetail.popularity} adult={movieDetail.adult} vote_average={movieDetail.vote_average} />
           </div>
           <hr/>
           {movieDetail.overview && (
