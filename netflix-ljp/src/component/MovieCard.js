@@ -32,11 +32,9 @@ const MovieCard = ({ item }) => {
                 ))}
             </div>
             <div className='card-info'>
-                <ul>
-                    <li><span><img width={20} src='https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png' />{item.vote_average}</span></li>
-                    <li><span className="imb-score"><FontAwesomeIcon icon={faUsers} />{item.popularity}</span></li>
-                    <li className={item.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{item.adult ? "over 18" : "under 18"}</li>
-                </ul>
+               <span><img width={20} src='https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png' />{item.vote_average}</span>
+                <span className="imb-score"><FontAwesomeIcon icon={faUsers} />{item.popularity}</span>
+                <span className={item.adult ? 'adult-text adult-over' : 'adult-text adult-under'}>{item.adult ? "over 18" : "under 18"}</span>
             </div>
         </div>
     </div>
