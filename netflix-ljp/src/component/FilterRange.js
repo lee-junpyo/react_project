@@ -21,9 +21,9 @@ const FilterRange = ({name}) => {
         </div>
         <div className='range-area'>
             <div className='range-value-area'>
-                <span> From : <b className='filter-bold-text'>{name === 'YEAR' ? filters.year.min : filters.score.min}</b></span>
+                <span> From : <b className='filter-bold-text'>{name === 'YEAR' ? `${filters.year.min}Y`  : filters.score.min}</b></span>
                 <span>&nbsp;-&nbsp;</span>
-                <span> To : <b className='filter-bold-text'>{name === 'YEAR' ? filters.year.max : filters.score.max}</b></span>
+                <span> To : <b className='filter-bold-text'>{name === 'YEAR' ? `${filters.year.max}Y` : filters.score.max}</b></span>
             </div>
             {name === 'YEAR' ? (
                 <InputRange
@@ -35,7 +35,6 @@ const FilterRange = ({name}) => {
                 minValue={1990}
                 value={filters.year}
                 onChange={(value) => handleChangeRange(value, 'year')}
-
                 />
             )
              : (
@@ -48,7 +47,6 @@ const FilterRange = ({name}) => {
                 minValue={0}
                 value={filters.score}
                 onChange={(value) => handleChangeRange(value, 'score')}
-                onChangeComplete={(args) => console.log(args)}
                 />
             )}
         </div>

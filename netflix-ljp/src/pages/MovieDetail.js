@@ -46,10 +46,10 @@ const MovieDetail = () => {
   return (
     <Container className='detail-container'>
       <Row className="mb-3">
-        <Col className='detail-poster-area'>
+        <Col lg={6} className='detail-poster-area'>
           <img src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${movieDetail.poster_path}`} />
         </Col>
-        <Col>
+        <Col lg={6}>
           <div>
             {movieDetail?.genres?.map((item)=>(
                     <Badge pill bg="danger" className='genre-badge'>
@@ -87,7 +87,7 @@ const MovieDetail = () => {
           <hr />
             {movieVideo&&
             <div>
-            <YouTube videoId={movieVideo.key} opts={{height : '400',playerVars : {
+            <YouTube videoId={movieVideo.key} opts={{width : '100%',playerVars : {
               autoplay : 1,
             }}} />
             <hr />
