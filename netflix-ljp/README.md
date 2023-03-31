@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+## 넷플릭스 프로젝트
+### 프로젝트 소개
+* 넷플릭스웹을 리액트로 구현한 프로젝트 입니다.
+* THE MOVIE DB API를 통해 영화 정보 및 리스트, 예고편을 가져오도록 개발 진행하였습니다.
+* 참고 사이트 : 넷플릭스, themoviedb
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 서버 URL
+<a target="blank">https://ljp-fake-netflix.netlify.app/</a>
 
-## Available Scripts
+### 스토리보드
+> * 유저는 배너를 볼 수 있다.
+> * 유저는 가장 인기있는 영화 리스트, 가장 평점 좋은 영화 리스트, 상영 예정작 리스트를 볼 수 있다.
+> * 각각의 영화 리스트는 슬라이드 형태로 넘길 수 있다.
+> * 유저는 영화에 마우스를 올려두면 영화의 제목과 장르, 평점, 인기도, 청불여부를 볼 수 있다.
+> * 유저는 영화 카드를 클릭하면 영화의 상세 정보를 볼 수 있다.
+> * 상세 정보에는 포스터, 영화 제목, 평점, 인기도 청불여부, 줄거리 요약, 예산, 날짜, 시간, 리뷰, 예고편, 관련영화 등이 있다.
+> * 유저는 영화를 검색할 수 있다.
+> * 유저는 영화를 인기도순으로 정렬할 수 있다.
+> * 유저는 장르별로 영화를 필터링 할 수 있다.
+> * 유저는 영화 날짜별로 필터링 할 수 있다.
 
-In the project directory, you can run:
+### 사용한 기술 스택
+#### IDE
+  <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white"/>
+<br>
 
-### `npm start`
+#### Front-End Programming Languages
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/>  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript(ES8)-F7DF1E?style=flat&logo=javascript&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white"/>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 클라우드
+<img src="https://img.shields.io/badge/netlify-%23000000.svg?style=flat&logo=netlify&logoColor=#00C7B7" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### State Management
+<img src="https://img.shields.io/badge/redux-%23593d88.svg?style=flate&logo=redux&logoColor=white)" />
+<img src="https://img.shields.io/badge/ReduxThunk-999999?style=flat&logo=Redux-Thunk" />
 
-### `npm test`
+#### 형상관리
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 라이브러리
+* react-bootstrap : 2.7.2
+* redux : 4.2.1
+* react-redux :8.0.5
+* redux-thunk : 2.4.2
+* react-router-dom : 6.9.0
+* axios : 1.3.4
+* react-youtube : 10.1.0
+* react-multi-carousel : 2.8.2
+* react-input-range : 1.3.0
+* react-spinners : 0.13.8
+<br>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 개발자 정보
+|Profile|<img src="https://user-images.githubusercontent.com/48265181/197502155-a56f3d2b-6301-41cf-aa65-59e54e253fa9.png" />|
+|:---:|:---:|
+|Name|이준표|
+|Email|2junticket@gmail.com|
